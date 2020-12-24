@@ -1,0 +1,269 @@
+2020-12-04 22:46:59,194 ERROR 11484 5948 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on /get_video [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 33, in get_video_info
+    video_info, m3u8_list = appHelper.get_video_info(video_uri)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\appHelper.py", line 66, in get_video_info
+    url = "{}{}".format(url_host, video_info.get("video_uri"))
+AttributeError: 'str' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 35, in get_video_info
+    app.logger().exception(err)
+TypeError: 'Logger' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 38, in get_video_info
+    return render_template("search.html", video_info=video_info, m3u8_list=m3u8_list)
+UnboundLocalError: local variable 'video_info' referenced before assignment
+2020-12-04 22:47:44,576 ERROR 25464 17960 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on /get_video [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 33, in get_video_info
+    video_info, m3u8_list = appHelper.get_video_info(video_uri)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\appHelper.py", line 66, in get_video_info
+    url = "{}{}".format(url_host, video_info.get("video_uri"))
+AttributeError: 'str' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 36, in get_video_info
+    app.logger().exception(err)
+TypeError: 'Logger' object is not callable
+2020-12-04 22:47:51,155 ERROR 25464 19680 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on /get_video [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 33, in get_video_info
+    video_info, m3u8_list = appHelper.get_video_info(video_uri)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\appHelper.py", line 66, in get_video_info
+    url = "{}{}".format(url_host, video_info.get("video_uri"))
+AttributeError: 'str' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 36, in get_video_info
+    app.logger().exception(err)
+TypeError: 'Logger' object is not callable
+2020-12-04 23:03:01,080 ERROR 23028 19176 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on /get_video [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 34, in get_video_info
+    return render_template("search.html", video_info=video_info, m3u8_list=m3u8_list, count=len(m3u8_list))
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\templates\search.html", line 34, in top-level template code
+    {% for index in count %}
+TypeError: 'int' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 36, in get_video_info
+    app.logger().exception(err)
+TypeError: 'Logger' object is not callable
+2020-12-05 00:15:24,567 ERROR 20552 17996 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 15, in hello_world
+    redirect(url_for("video"))
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'video'. Did you mean 'get_video' instead?
+2020-12-05 00:16:02,222 ERROR 18200 11504 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-12-05 00:16:04,971 ERROR 18200 23864 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-12-05 00:16:42,793 ERROR 8716 11180 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-12-05 00:17:25,497 ERROR 784 23620 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 15, in hello_world
+    redirect(url_for("video"))
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'video'. Did you mean 'get_video' instead?
+2020-12-05 00:17:26,864 ERROR 784 22928 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\yangx\PycharmProjects\flaskdemo\app.py", line 15, in hello_world
+    redirect(url_for("video"))
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'video'. Did you mean 'get_video' instead?
+2020-12-05 00:20:12,164 ERROR 6384 12764 C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py 1892 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\yangx\.virtualenvs\flaskdemo\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-12-24 22:43:35,978 ERROR 16396 5484 C:\Users\yangx\.virtualenvs\codefalsk-8_gFhTo1\lib\site-packages\flask\app.py 1892 Exception on /search [POST]
+Traceback (most recent call last):
+  File "C:\Users\yangx\.virtualenvs\codefalsk-8_gFhTo1\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\codefalsk-8_gFhTo1\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\yangx\.virtualenvs\codefalsk-8_gFhTo1\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\yangx\.virtualenvs\codefalsk-8_gFhTo1\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\yangx\.virtualenvs\codefalsk-8_gFhTo1\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\yangx\.virtualenvs\codefalsk-8_gFhTo1\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/yangx/PycharmProjects/videodemo-flask/app.py", line 36, in decorated
+    return f(*args, **kwargs)
+  File "C:/Users/yangx/PycharmProjects/videodemo-flask/app.py", line 75, in get_search
+    video_infos = appHelper.search_video(search_video_name)
+  File "C:\Users\yangx\PycharmProjects\videodemo-flask\appHelper.py", line 26, in search_video
+    soup = BeautifulSoup(resp.content, "lxml")
+  File "C:\Users\yangx\.virtualenvs\codefalsk-8_gFhTo1\lib\site-packages\bs4\__init__.py", line 246, in __init__
+    % ",".join(features))
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
