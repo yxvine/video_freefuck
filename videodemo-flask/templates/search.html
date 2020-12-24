@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link
+      rel="stylesheet"
+      href="/static/front/css/mdui.min.css"
+      integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="mdui-color-theme">
+    <div class="mdui-col-sm-6 mdui-col-lg-9">
+        <div class="mdui-card mdui-p-a-5 mdui-m-t-5">
+
+      <div class="mdui-card-header">
+          <div class="mdui-card-header-subtitle">
+              <h1>{{ video_info["video_name"] }}</h1>
+
+          </div>
+
+      </div>
+            <div class="mdui-card-media">
+      <video class="mdui-video-fluid" id="video" controls="" loop="false" width="100%"></video>
+  </div>
+            <div class="mdui-card-actions">
+          {% for index in count %}
+              <button id="video{{ index }}"  class="mdui-btn mdui-ripple">{{ m3u8_list[index-1][0] }}</button>
+          {% endfor %}
+
+  </div>
+            <div class="mdui-card-content">
+                <h3>简介：</h3>
+              <p>最近更新时间：{{ video_info["up_time"] }}</p>
+              <p>导演：{{ video_info["director"] }}</p>
+              <p>主演：{{ video_info["actor"] }}</p>
+                <h4>剧情简介：</h4>
+              <p>{{ video_info["more_info"] }}</p>
+          </div>
+      </div>
+
+  <div class="mdui-card-actions">
+{#      <button class="mdui-btn mdui-ripple">上一集</button>#}
+{#      <button class="mdui-btn mdui-ripple">下一集</button>#}
+  </div>
+
+      <script src="/static/front/js/hls.js"></script>
+     <script>
+                    function play_m3u8(video_id, m3u8_src) {
+                        var video = document.getElementById(video_id);
+                        if (Hls.isSupported()) {
+                            var hls = new Hls();
+                            hls.loadSource(m3u8_src);
+                            hls.attachMedia(video);
+                            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                                video.play();
+                            });
+                        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                            video.src = m3u8_src;
+                            video.addEventListener('loadedmetadata', function () {
+                                video.play();
+                            });
+                        }
+                    }
+                </script>
+     <script>
+                    {% for index in count %}
+                        document.getElementById("video{{ index }}").addEventListener('click', function () {
+                        play_m3u8("video", "{{ m3u8_list[index-1][-1] }}");
+                        this.style.backgroundColor='#E8F5E9';
+                    });
+                    {% endfor %}
+                </script>
+</div>
+    </div>
+
+    <!-- MDUI JavaScript -->
+    <script
+      src="static/front/js/mdui.min.js"
+      integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

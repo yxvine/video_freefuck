@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- MDUI CSS -->
+  <link rel="stylesheet" href="/static/front/css/mdui.min.css" integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+ </head>
+ <body class="mdui-color-theme">
+  <div class="mdui-container">
+   <div class="mdui-card mdui-p-a-5 mdui-m-t-5">
+    <div class="mdui-textfield mdui-textfield-floating-label">
+     <i class="mdui-icon material-icons">search</i>
+     <input id="video_name" class="mdui-textfield-input" maxlength="100" placeholder="你想看什么？" type="text" required="" />
+     <div class="mdui-textfield-error">
+      搜索片名不能为空
+     </div>
+    </div>
+    <button id="search" class="mdui-btn mdui-btn-block mdui-color-blue-200 ">搜索</button>
+       <script>
+            document.getElementById('search').addEventListener('click', function () {
+                var $ = mdui.$;
+                var video_name = $("#video_name").val();
+                if (video_name.length === 0) {
+                    mdui.alert("搜索名不能为空");
+                } else {
+                    console.log(video_name);
+                    $.ajax({
+                        method: 'POST',
+                        url: '/search',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        data: JSON.stringify(
+                            {
+                                "video_name": video_name,
+                            }
+                        ),
+                        success: function (data) {
+                            $("#search_list").html("");
+                            $.each(data, function (index, value) {
+                                //<a href="#" class="mdui-list-item mdui-ripple">Inbox</a>
+                                $("#search_list").append('<a href="/get_video?name=' + value["video_uri"] + '"class="mdui-list-item mdui-ripple">' + value["video_name"] + '</a>');
+                            });
+                            //<li class="mdui-list-item mdui-ripple">Inbox</li>
+
+                        }
+                    });
+                }
+
+            });
+        </script>
+
+   </div>
+   <div class="mdui-card mdui-p-a-5 mdui-m-t-5">
+       <div>
+           <ul id="search_list" class="mdui-list">
+            </ul>
+       </div>
+   </div>
+  </div>
+  <!-- MDUI JavaScript -->
+    <script
+      src="static/front/js/mdui.min.js"
+      integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+      crossorigin="anonymous"
+    ></script>
+ </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link
+      rel="stylesheet"
+      href="/static/front/css/mdui.min.css"
+      integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+      crossorigin="anonymous"
+    />
+    <title>Hello, world!</title>
+  </head>
+  <body class="mdui-color-theme">
+    <div class="mdui-container">
+        <form>
+        <div class="mdui-card mdui-p-a-5 mdui-m-t-5">
+      <div class="mdui-textfield mdui-textfield-floating-label">
+        <label class="mdui-textfield-label">用户名</label>
+        <input class="mdui-textfield-input" type="text" required/>
+        <div class="mdui-textfield-error">用户名不能为空</div>
+      </div>
+    
+      <div class="mdui-textfield mdui-textfield-floating-label">
+        <label class="mdui-textfield-label">邮箱</label>
+        <input class="mdui-textfield-input" type="search" required/>
+        <div class="mdui-textfield-error">邮箱格式错误</div>
+      </div>
+    
+      <div class="mdui-textfield mdui-textfield-floating-label">
+        <label class="mdui-textfield-label">密码</label>
+        <input class="mdui-textfield-input" type="password" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" required/>
+        <div class="mdui-textfield-error">密码至少 6 位，且包含大小写字母</div>
+        <div class="mdui-textfield-helper">请输入至少 6 位，且包含大小写字母的密码</div>
+      </div>
+    
+      <button class="mdui-btn mdui-btn-block mdui-color-blue-200 mdui-ripple mdui-m-t-5" >注册</button>
+    </div>
+    
+    </form>
+    </div>
+
+    <!-- MDUI JavaScript -->
+    <script
+      src="static/front/js/mdui.min.js"
+      integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
