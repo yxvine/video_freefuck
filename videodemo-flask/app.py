@@ -10,6 +10,9 @@ from config import config
 app = Flask(__name__)
 config["development"].init_app(app)
 
+def pasrse(param):
+    # todo
+    return param
 
 def check_auth(username, password):
     """This function is called to check if a username /
